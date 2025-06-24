@@ -1,0 +1,336 @@
+/* How It Works Hero Section */
+.how-it-works-hero {
+    padding: 180px 0 100px;
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+    color: var(--light-text);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.how-it-works-hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/how-it-works-pattern.png') center/cover no-repeat;
+    opacity: 0.1;
+}
+
+.how-it-works-hero .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.how-it-works-hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.how-it-works-hero p {
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* Steps Section */
+.steps-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.steps-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 4px;
+    height: 100%;
+    background-color: var(--light-color);
+    z-index: 1;
+}
+
+.step-card {
+    position: relative;
+    margin-bottom: 60px;
+    background-color: var(--light-text);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+}
+
+.step-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    z-index: 3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-content {
+    padding: 40px;
+    padding-left: 100px;
+}
+
+.step-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.step-content p {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.step-image {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.step-card:hover .step-image img {
+    transform: scale(1.03);
+}
+
+/* Dashboard Section */
+.dashboard-preview {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.dashboard-image {
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.dashboard-image:hover {
+    transform: translateY(-10px);
+}
+
+.dashboard-features {
+    flex: 1;
+}
+
+.feature-item {
+    display: flex;
+    margin-bottom: 30px;
+    background-color: var(--light-text);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(37, 211, 102, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.feature-text h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.feature-text p {
+    font-size: 14px;
+    color: var(--dark-gray);
+}
+
+/* Video Section */
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: 10px;
+    padding: 60px;
+    color: var(--light-text);
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.cta-box h2 {
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+.cta-box p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cta-box .btn-primary {
+    background-color: var(--light-text);
+    color: var(--secondary-color);
+}
+
+.cta-box .btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-box .btn-secondary {
+    border-color: var(--light-text);
+    color: var(--light-text);
+}
+
+.cta-box .btn-secondary:hover {
+    background-color: var(--light-text);
+    color: var(--secondary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .dashboard-preview {
+        flex-direction: column;
+    }
+    
+    .steps-container:before {
+        left: 30px;
+    }
+    
+    .step-content {
+        padding-left: 80px;
+    }
+    
+    .cta-box {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works-hero {
+        padding: 150px 0 80px;
+    }
+    
+    .how-it-works-hero h1 {
+        font-size: 36px;
+    }
+    
+    .how-it-works-hero p {
+        font-size: 18px;
+    }
+    
+    .steps-container:before {
+        display: none;
+    }
+    
+    .step-content {
+        padding: 30px;
+    }
+    
+    .step-number {
+        position: static;
+        margin-bottom: 20px;
+    }
+    
+    .cta-box {
+        padding: 40px 15px;
+    }
+    
+    .cta-box h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .how-it-works-hero h1 {
+        font-size: 30px;
+    }
+    
+    .step-content h3 {
+        font-size: 22px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}

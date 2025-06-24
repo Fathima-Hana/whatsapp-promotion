@@ -1,0 +1,481 @@
+/* Pricing Hero Section */
+.pricing-hero {
+    padding: 180px 0 100px;
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--secondary-color) 100%);
+    color: var(--light-text);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/pricing-hero-pattern.png') center/cover no-repeat;
+    opacity: 0.1;
+}
+
+.pricing-hero .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pricing-hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.pricing-hero p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* Pricing Switcher */
+.pricing-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 15px;
+}
+
+.pricing-switcher span {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.pricing-switcher small {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Pricing Plans */
+.pricing-plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.pricing-card {
+    background-color: var(--light-text);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary-color);
+    transform: translateY(-10px);
+}
+
+.pricing-card.featured:hover {
+    transform: translateY(-15px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 5px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transform: rotate(45deg);
+    width: 120px;
+    text-align: center;
+}
+
+.pricing-header {
+    padding: 40px 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-header h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.price {
+    margin-bottom: 25px;
+    display: none;
+}
+
+.price.active {
+    display: block;
+}
+
+.price .currency {
+    font-size: 24px;
+    vertical-align: top;
+    line-height: 1;
+    margin-right: 2px;
+}
+
+.price .amount {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--dark-color);
+}
+
+.price .period {
+    font-size: 16px;
+    color: var(--dark-gray);
+}
+
+.price .billed {
+    display: block;
+    font-size: 14px;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.pricing-features {
+    padding: 30px;
+}
+
+.pricing-features ul {
+    list-style: none;
+}
+
+.pricing-features li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.pricing-features i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: var(--primary-color);
+}
+
+/* Comparison Table */
+.comparison-table {
+    overflow-x: auto;
+    margin-top: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    background: var(--light-text);
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.comparison-table th {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    font-weight: 600;
+}
+
+.comparison-table th:first-child {
+    text-align: left;
+    background-color: var(--dark-color);
+}
+
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.comparison-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.comparison-table i.fa-check {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.comparison-table i.fa-times {
+    color: #ff6b6b;
+    font-size: 18px;
+}
+
+/* FAQ Section */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    padding: 20px;
+    background-color: var(--light-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f9f9f9;
+}
+
+.faq-question h4 {
+    font-size: 18px;
+    margin: 0;
+    color: var(--dark-color);
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    background-color: #f9f9f9;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 20px 0;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.faq-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.faq-cta a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.faq-cta a:hover {
+    text-decoration: underline;
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: 10px;
+    padding: 60px;
+    color: var(--light-text);
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.cta-box h2 {
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+.cta-box p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cta-box .btn-primary {
+    background-color: var(--light-text);
+    color: var(--secondary-color);
+}
+
+.cta-box .btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-box .btn-secondary {
+    border-color: var(--light-text);
+    color: var(--light-text);
+}
+
+.cta-box .btn-secondary:hover {
+    background-color: var(--light-text);
+    color: var(--secondary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .pricing-plans {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .pricing-card.featured {
+        transform: translateY(0);
+    }
+    
+    .pricing-card.featured:hover {
+        transform: translateY(-5px);
+    }
+    
+    .popular-badge {
+        right: -25px;
+        top: 15px;
+        font-size: 12px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-hero {
+        padding: 150px 0 80px;
+    }
+    
+    .pricing-hero h1 {
+        font-size: 36px;
+    }
+    
+    .pricing-hero p {
+        font-size: 18px;
+    }
+    
+    .price .amount {
+        font-size: 42px;
+    }
+    
+    .cta-box {
+        padding: 40px 20px;
+    }
+    
+    .cta-box h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pricing-hero h1 {
+        font-size: 30px;
+    }
+    
+    .pricing-switcher {
+        flex-direction: column;
+    }
+    
+    .popular-badge {
+        right: -35px;
+        top: 10px;
+        transform: rotate(45deg) scale(0.8);
+    }
+    
+    .faq-question h4 {
+        font-size: 16px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
